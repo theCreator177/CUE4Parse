@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace CUE4Parse_Conversion.Animations
@@ -21,7 +21,7 @@ namespace CUE4Parse_Conversion.Animations
             if (FileData.Length <= 0) return false;
 
             savedFilePath = FixAndCreatePath(baseDirectory, FileName);
-            File.WriteAllBytesAsync(savedFilePath, FileData);
+            File.WriteAllBytes(savedFilePath, FileData);
             label = Path.GetFileName(savedFilePath);
             return File.Exists(savedFilePath);
         }

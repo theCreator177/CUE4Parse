@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -32,7 +32,7 @@ namespace CUE4Parse_Conversion.Meshes
             });
 
             savedFilePath = FixAndCreatePath(baseDirectory, FileName);
-            File.WriteAllBytesAsync(savedFilePath, FileData);
+            File.WriteAllBytes(savedFilePath, FileData);
             label = Path.GetFileName(savedFilePath);
             return File.Exists(savedFilePath);
         }

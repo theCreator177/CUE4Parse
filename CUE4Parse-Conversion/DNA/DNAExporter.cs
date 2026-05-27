@@ -35,7 +35,7 @@ public class DNAExporter : ExporterBase
             return false;
         }
 
-        File.WriteAllBytesAsync(savedFilePath, _dnaAsset.DNAData.Value);
+        File.WriteAllBytes(savedFilePath, _dnaAsset.DNAData.Value);
         return File.Exists(savedFilePath);
     }
 
